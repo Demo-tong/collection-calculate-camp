@@ -18,6 +18,7 @@ function get_letter_interval(number_a, number_b) {
   temp = result.map(function (item) {
     return String.fromCharCode(item);
   });
+  
   return temp;
 }
 
