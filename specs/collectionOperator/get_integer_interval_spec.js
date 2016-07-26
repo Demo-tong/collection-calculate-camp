@@ -19,7 +19,7 @@ describe('get_integer_interval', function () {
     expect(result).toEqual(collection_b);
   });
 
-  iit('给定两个相同的数字得到只含此数字的数组', function() {
+  it('给定两个相同的数字得到只含此数字的数组', function() {
 
     var result = get_integer_interval(5, 5);
     expect(result).toEqual([5]);
