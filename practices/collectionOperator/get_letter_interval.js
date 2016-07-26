@@ -3,7 +3,6 @@
 function get_letter_interval(number_a, number_b) {
   //在这里写入代码
   let result = [];
-  let temp = [];
 
   if (number_a < number_b) {
     for (let i = number_a; i <= number_b; ++i) {
@@ -15,10 +14,10 @@ function get_letter_interval(number_a, number_b) {
     }
   }
 
-  temp = result.map(function (item) {
+  let temp = result.map(function (item) {
     return String.fromCharCode(item);
   });
-  
+
   return temp;
 }
 

@@ -8,7 +8,7 @@ function get_union(collection_a, collection_b) {
     let exist = collection_a.find(function (itema) {
       return itema === itemb;
     });
-    if(!exist){
+    if (!exist) {
       result.push(itemb);
     }
   }

@@ -12,23 +12,17 @@ function get_letter_interval_2(number_a, number_b) {
     second.push(String.fromCharCode(97 + i));
   }
 
-  if(number_a < number_b){
-    for(let i = number_a - 1; i < number_b; ++i){
-      let temp1 = parseInt(i / 26);
-      let temp2 = i % 26;
+  let maxer = number_a >= number_b ? number_a : number_b;
+  let miner = number_a < number_b ? number_a : number_b;
 
-      result.push(second[temp1] + first[temp2]);
-    }
-  }else{
-    for(let i = number_a - 1; i >= number_b - 1; --i){
-      let temp1 = parseInt(i / 26);
-      let temp2 = i % 26;
+  for (let i = miner - 1; i < maxer; ++i) {
+    let temp1 = parseInt(i / 26);
+    let temp2 = i % 26;
 
-      result.push(second[temp1] + first[temp2]);
-    }
+    result.push(second[temp1] + first[temp2]);
   }
 
-  return result;
+  return number_a < number_b ? result : result.reverse();
 }
 
 module.exports = get_letter_interval_2;

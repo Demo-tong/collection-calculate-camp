@@ -1,6 +1,6 @@
 'use strict';
 
-var get_integer_interval = require('../../practices/collectionOperator/get_letter_interval.js');
+var get_integer_interval = require('../../practices/collectionOperator/get_integer_interval.js');
 
 describe('get_integer_interval', function () {
 
@@ -19,7 +19,7 @@ describe('get_integer_interval', function () {
     expect(result).toEqual(collection_b);
   });
 
-  it('给定两个相同的数字得到只含此数字的数组', function() {
+  iit('给定两个相同的数字得到只含此数字的数组', function() {
 
     var result = get_integer_interval(5, 5);
     expect(result).toEqual([5]);

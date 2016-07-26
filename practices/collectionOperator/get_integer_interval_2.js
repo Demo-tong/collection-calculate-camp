@@ -2,16 +2,20 @@
 
 function get_integer_interval_2(number_a, number_b) {
   //在这里写入代码
-  let result = [];
-  let first = [];
-  let second = [];
 
-  for(let i = 0; i < 26; ++i){
-    first.push(String.fromCharCode(97 + i));
+  let result = [];
+
+  let maxer = number_a >= number_b ? number_a : number_b;
+  let miner = number_a < number_b ? number_a : number_b;
+
+  for (let i = miner; i <= maxer; ++i) {
+    if (i % 2 === 0) {
+      result.push(i);
+    }
   }
 
-  return first;
- // return result;
+  return number_a <= number_b ? result : result.reverse();
+
 }
 
 module.exports = get_integer_interval_2;
